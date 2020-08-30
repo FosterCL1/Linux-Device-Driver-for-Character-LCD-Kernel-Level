@@ -6,11 +6,11 @@
 
 obj-m	:= klcd.o
  
-KDIR	:= /root/bb-kernel/KERNEL
+KDIR    := /home/colin/src/beagleboneKernel/kernel/linux/
 PWD	:= $(shell pwd) 
  
 default:
-	$(MAKE) ARCH:=arm CROSS_COMPILE:=/root/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/bin/arm-linux-gnueabihf- \
+	$(MAKE) ARCH:=arm CROSS_COMPILE:=/usr/bin/arm-linux-gnueabi- \
 	-C $(KDIR) M=$(PWD) modules 
 
 clean:	
