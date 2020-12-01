@@ -553,7 +553,7 @@ static ssize_t klcd_write(struct file *p_file, const char __user *buf, size_t le
 	// print on the first line by default
 	lcd_print( kbuf, LCD_FIRST_LINE);
 
-	printk(KERN_INFO "klcd Driver: write()\n");
+	//printk(KERN_INFO "klcd Driver: write()\n");
 
 	return len;
 }
@@ -562,7 +562,7 @@ static long klcd_ioctl( struct file *p_file, unsigned int ioctl_command, unsigne
 {
 	struct ioctl_mesg ioctl_arguments;
 
-	printk(KERN_INFO "klcd Driver: ioctl\n");
+	//printk(KERN_INFO "klcd Driver: ioctl\n");
       	
 	if( ((const void *)arg) == NULL){
 		printk( KERN_DEBUG "ERR: Invalid argument for klcd IOCTL \n");
